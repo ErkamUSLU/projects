@@ -16,7 +16,7 @@ public class Methodlar {
         return yasKategori;
     }
 
-    public static double sehirBUl(String hedefSehir, double anaFiyat) {
+    public static double sehirBul(String hedefSehir, double anaFiyat) {
 
         switch (hedefSehir) {
             case "B": {
@@ -56,6 +56,8 @@ public class Methodlar {
 
         }
         return anaFiyat;
+
+
     }
 }
 

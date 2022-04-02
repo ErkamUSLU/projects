@@ -20,7 +20,7 @@ public class Yolcu_Bilgileri {
 
         System.out.print("Lutfen gitmek istediginiz yeri girin = ");
         yolcu.hedefSehir=scanner.next().substring(0,1).toUpperCase();
-        anaFiyat=Methodlar.sehirBUl(yolcu.hedefSehir,anaFiyat);
+        anaFiyat=Methodlar.sehirBul(yolcu.hedefSehir,anaFiyat);
 
         System.out.println("Lutfen yasinizi giriniz = ");
         yolcu.yas=scanner.nextInt();
@@ -28,10 +28,10 @@ public class Yolcu_Bilgileri {
 
         anaFiyat= Methodlar.yasIndirimi(yolcu.yasKategori,anaFiyat);
 
-        System.out.println("Gidi donus ise 1 tek yon ise 2  tiklayiniz.");
+        System.out.println("Tek yon ise 1 gidis donus ise 2 tiklayiniz.");
         yolcu.gidisDonusSecim=scanner.nextInt();
-
-        if (yolcu.gidisDonusSecim==1){anaFiyat*=0.8;}
+        if(yolcu.gidisDonusSecim==1){}
+        else if (yolcu.gidisDonusSecim==2){anaFiyat*=0.8;}
         System.out.println("ToplamUcetiniz = "+ anaFiyat+ " Tl'dir.");
 
     }
