@@ -17,7 +17,6 @@ public class Yolcu_Bilgileri {
         yolcu.isimSoyisim=scanner.nextLine();
 
 
-
         System.out.print("Lutfen gitmek istediginiz yeri girin = ");
         yolcu.hedefSehir=scanner.next().substring(0,1).toUpperCase();
         anaFiyat=Methodlar.sehirBul(yolcu.hedefSehir,anaFiyat);
