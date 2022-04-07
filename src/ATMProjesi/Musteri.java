@@ -1,24 +1,23 @@
-package ERKAM_ATM;
+package ATMProjesi;
 
 import java.util.Scanner;
 
-public class Musteri {
+public class Musteri extends Variable{
     public static Scanner scan = new Scanner(System.in);
+    protected static int secim;
 
-    public static boolean giris() {
-        boolean sifreOnay = false;
-        String girilenKartNo;
-        String girilenSifre;
+    public static void giris() {
+        Scanner scan1 = new Scanner(System.in);
         System.out.println("***Hosgeldiniz***");
         System.out.println("Kart numaranizi girin: ");
-        girilenKartNo = scan.nextLine();
+        String girilenKartNo = scan1.nextLine();
         girilenKartNo.replace(" ", "");
         System.out.println("Sifre: ");
-        girilenSifre = scan.next();
-        if (girilenKartNo.equals(Variable.kartNo) && girilenSifre.equals(Variable.sifre)) {
-            sifreOnay = true;
-        } else System.out.println("Hatali giris...");
-        return sifreOnay;
+        String girilenSifre = scan1.next();
+        if(girilenKartNo.equals(kartNo) && girilenSifre.equals(sifre)) {
+         girisEkrani();
+        }else {System.out.println("Hatali giris...");
+        giris();}
     }
 
     public static void paraYatir() {
@@ -85,8 +84,13 @@ public class Musteri {
         if (Variable.sifre.equals(girilenSifre1)){
             System.out.println("Koyacaginiz yeni sifreyi giriniz: ");
             String yeniSifre = scan.next().substring(0, 3);
+            if (yeniSifre.length()!=4){
+                System.out.println("Sifreniz 4 haneli olmali.");
+                sifreDegistirme();
+            }
+            else {
             String sifre = yeniSifre;
-            System.out.println("Sifreniz basariyla degistirildi...");
+            System.out.println("Sifreniz basariyla degistirildi...");}
         }else{
             System.out.println("Yanlis sifre girdiniz.");
             System.out.println("Cikis icin 1 tekrar denemek icin 2 e basin.");
@@ -101,4 +105,47 @@ public class Musteri {
     public static void cikis() {
         System.out.println("Cikis yapiliyor.Kendinize iyi bakin.Gorusmek dilegiyle.");
     }
-}
+    public static void girisEkrani() {
+        System.out.println("***MENU***");
+        System.out.println("1-)Bakiye Sorgulama: ");
+        System.out.println("2-)Para Yatirma: ");
+        System.out.println("3-)Para Cekme: ");
+        System.out.println("4-)Sifre degistirme: ");
+        System.out.println("5-)Para Gonderme: ");
+        System.out.println("6-)Cikis: ");
+
+        Musteri obj = new Musteri();
+        secim = scan.nextInt();
+        switch (secim) {
+            case 1:
+                bakiyeSorgulamak();
+                girisEkrani();
+                break;
+            case 2:
+                obj.paraYatir();
+                girisEkrani();
+                break;
+            case 3:
+                obj.paraCekme();
+                girisEkrani();
+                break;
+            case 4:
+                obj.sifreDegistirme();
+                girisEkrani();
+                break;
+            case 5:
+                obj.paraGonderme();
+                girisEkrani();
+                break;
+            case 6:
+                cikis();
+                break;
+            default:
+                System.out.println("Lutfen gecerli bir tus girin...");
+                girisEkrani();
+                break;
+        }
+
+        }
+
+    }
