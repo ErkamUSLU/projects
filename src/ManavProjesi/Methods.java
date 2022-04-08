@@ -18,7 +18,6 @@ public class Methods extends Variables {
         System.out.println("Suan sepetinizdeki urunler: " + sepet);
         secimYap();
     }
-
     protected static void paraUstuHesapla() {
         System.out.println("Lutfen hesap bakiyenizi giriniz: ");
         musteriBakiye = scan.nextDouble();
@@ -29,7 +28,6 @@ public class Methods extends Variables {
             System.out.println(musteriBakiye - sepetTutari);
 
         }
-
         protected static void secimYap () {
             System.out.println("Baska bir urun almak ister misiniz: E/H");
             String secim = scan.next().substring(0, 1).toUpperCase();
@@ -43,7 +41,5 @@ public class Methods extends Variables {
                 secimYap();
             }
         }
-
-
     }
 
