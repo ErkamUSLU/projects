@@ -1,4 +1,4 @@
-package sansliKisiBul;
+package SansliKisiBulmaProjesi;
 
 import java.util.ArrayList;
 import java.util.List;

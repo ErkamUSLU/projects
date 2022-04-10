@@ -1,8 +1,4 @@
-package sansliKisiBul;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package SansliKisiBulmaProjesi;
 
 public class Main {
     public static void main(String[] args) {
