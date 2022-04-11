@@ -15,6 +15,6 @@ public class Kare extends Sekil{
 
     @Override
     public String toString() {
-        return "Kare" +"\nkenar=" + kenar +"\ncevre= "+cevreCemberHesaplama()+"\nalan= "+alanCemberHesaplama();
+        return "Kare" +"\nkenar= " + kenar +"\ncevre= "+cevreKareHesaplama()+"\nalan= "+alanKareHesaplama();
     }
 }
