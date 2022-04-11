@@ -15,6 +15,6 @@ public class Dikdortgen extends Sekil{
     @Override
     public String toString() {
         return "Dikdortgen" +"\nuzunKenar= " + uzunKenar +"\nkisaKenar= " + kisaKenar +"\nalan= "
-                +alanCemberHesaplama()+"\ncevre= "+cevreCemberHesaplama();
+                +alanDikdortgenHesaplama()+"\ncevre= "+cevreDikdortgenHesaplama();
     }
 }

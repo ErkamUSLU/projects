@@ -11,10 +11,10 @@ public class Sekil {
         this.kisaKenar = kisaKenar;
     }
 
-    public Sekil(double yaricap) {
-        this.yaricap = yaricap;
+    public Sekil(double x) {
+       this.kenar=x;
+       this.yaricap=x;
     }
-
 
     public double cevreDikdortgenHesaplama (){
         return 2*(uzunKenar+kisaKenar);
@@ -24,16 +24,22 @@ public class Sekil {
         return (uzunKenar*kisaKenar);
     }
 
+
+
+
     public double cevreCemberHesaplama (){
-        return 2*3.14*yaricap;
+        return (2*3.14*yaricap);
     }
 
     public double alanCemberHesaplama (){
-        return 3.14*yaricap*yaricap;
+        return (3.14*yaricap*yaricap);
     }
 
+
+
+
     public double cevreKareHesaplama (){
-        return 4*kenar;
+        return (4*kenar);
     }
 
     public double alanKareHesaplama (){
