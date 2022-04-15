@@ -16,7 +16,6 @@ public class Sekil {
        this.yaricap=x;
     }
 
-
     public double cevreDikdortgenHesaplama (){
         return 2*(uzunKenar+kisaKenar);
     }
