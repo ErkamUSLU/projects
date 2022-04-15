@@ -3,8 +3,8 @@ package Alan_CevreHesaplamaProjesi;
 public class Sekil {
     double uzunKenar;
     double kisaKenar;
-    double kenar;
-    double yaricap;
+    static double kenar;
+    static double yaricap;
 
     public Sekil(double uzunKenar, double kisaKenar) {
         this.uzunKenar = uzunKenar;
@@ -15,6 +15,7 @@ public class Sekil {
        this.kenar=x;
        this.yaricap=x;
     }
+
 
     public double cevreDikdortgenHesaplama (){
         return 2*(uzunKenar+kisaKenar);
